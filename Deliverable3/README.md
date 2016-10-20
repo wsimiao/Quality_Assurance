@@ -3,7 +3,7 @@
 ***
 
 
-<strong>1. Summary for the test</strong>
+### 1. Summary for the test
   * For the environment setting up
     * I am a mac user, so change the web driver in the libs
     * I also tried to user different firefox browser version and set up the environment with maven which also works
@@ -15,7 +15,7 @@
     <img src = "images/image1.png">
     <img src = "images/image2.png">
 
-<strong>2. Stories and scenarios</strong>
+### 2. Stories and scenarios
 
 <strong>Story 1:</strong> As a registered user, if I typed in the valid credential, I can log in. Otherwise, I cannot log in
 * Scenario 1: Test login with valid credentials
@@ -60,6 +60,5 @@
   * When I enter cream in the search bar
   * Then There is no result list returned and it shows nothing matches
 
-
-  <strong>3. Test Result</strong>
+### 3. Test Result
   <img src="images/image3.png">
