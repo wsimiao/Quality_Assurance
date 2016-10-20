@@ -13,7 +13,6 @@ import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import static HelloWorld.LoginTest.driver;
 
 /**
  *
@@ -50,28 +49,9 @@ public class TestLogin {
         //driver.findElement(By.linkText("Howdy, miaopoem")).click();
         driver.findElement(By.id("login")).click();
         driver.findElement(By.linkText("Log out")).click();
-        //driver.quit();
+        driver.quit();
     }
     
-//    @When("^I enter invalid username or invalid password$")
-//    public void I_enter_invalid_username_or_invalid_password() throws Throwable {
-//        driver.findElement(By.id("log")).clear();
-//        driver.findElement(By.id("log")).sendKeys("miaopoem");
-//        driver.findElement(By.id("pwd")).clear();
-//        driver.findElement(By.id("pwd")).sendKeys("123456");
-//        
-//        //driver.findElement(By.linkText("Log out")).click();
-//    }
-//
-//    @Then("^User cannot login$")
-//    public void User_cannot_login() throws Throwable {
-//        driver.findElement(By.id("login")).click();
-//        assertEquals("ERROR", driver.findElement(By.cssSelector("strong")).getText());
-//        try {
-//          assertEquals("", driver.findElement(By.cssSelector("strong")).getAttribute("value"));
-//        } catch (Error e) {
-//        }
-//    }
     
     @When("^I enter invalid username or invalid password$")
     public void I_enter_invalid_username_or_invalid_password() throws Throwable {
@@ -90,6 +70,7 @@ public class TestLogin {
           assertEquals("", driver.findElement(By.cssSelector("strong")).getAttribute("value"));
         } catch (Error e) {
         }
+        driver.quit();
     }
 
 }
