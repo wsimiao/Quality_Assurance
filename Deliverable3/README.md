@@ -9,7 +9,7 @@
     * I also tried to user different firefox browser version and set up the environment with maven which also works
   * Testing
     * It is very challenging to use cucumber for annotation
-    * Most scenarios fail because the elements I checked have not been return when the program runs.
+    * Most scenarios fail because the elements I checked have not been returned when the program runs.
     * Use Thread.sleep() method to solve this kind of problem
     * For the login failure I met, it is because the account is blocked because of multiple invalid credential submitted as showed in the graph below.
     <img src = "images/image1.png">
