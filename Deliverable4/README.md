@@ -22,6 +22,6 @@ Unit Testing:
 Snapshot before and after refactoring
 
 * Before
-<img src ="img/pic1.png">
+<img src = "img/Pic1.png">
 * After
-<img src = "img/pic2.png">
+<img src = "img/Pic2.png">
