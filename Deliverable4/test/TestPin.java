@@ -31,6 +31,22 @@ public class TestPin {
         Cell newCell = new Cell(false);
         assertEquals(newCell.toString(), ".");
     }
+    //Pining Test for Cell.toString
+    //Ensure toString returns
+    //Ensure ToString returns "X" with multiple Cells
+  @Test
+  public void testCellToStringMultiple() {
+    Cell[][] newCell = new Cell[5][5];
+    for (int i=0; i < 5; i++){
+      for (int k=0; k<5; k++){
+        newCell[i][k]= new Cell();
+        newCell[i][k].setText(" ");
+      }
+    }
+    newCell[2][2].setText("X");
+    assertEquals(newCell[2][2].toString(),"X");
+    assertEquals(newCell[1][2].toString(), ".");
+  }
     
     //Pinning Test for ConverToInt()
     //To ensure the returned value is 0 when passed 0
@@ -96,6 +112,19 @@ public class TestPin {
     } catch (IllegalAccessException e) {
         fail(e.getMessage());
     }
+  }
+  
+  //To test the refactor of convertToInt has no effects on getNumNeighbors
+  //initialize the cell[][] manually as all dead
+  //get the number of neighbors for position(3,4)
+  //The result shoulb be 0
+  @Test
+  public void testGetNumNeighbor() throws NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+      Method method = MainPanel.class.getDeclaredMethod("getNumNeighbors", int.class, int.class);
+      method.setAccessible(true);
+      MainPanel panel = new MainPanel(20);
+      int returnNum = (int) method.invoke(panel, 3, 4);
+      assertEquals(0, returnNum);
   }
   
   //******************************
