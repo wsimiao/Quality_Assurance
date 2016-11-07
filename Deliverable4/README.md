@@ -4,8 +4,11 @@
 ## Summary:
 methods that are refactored:
 * ConvertToInt() in MainPanel.java
+  * From the VM profile, I found this method takes too much CPU to process, and I took a look at this method and found most code is redundant.
 * runContinuous() in MainPanel.java
+  * After changing the first method, I run the program again. From the VM profile, I found this method takes too much CPU to process, and I took a look at this method and found most code is redundant.
 * toString() in Cell.java
+  * From the VM profile, I found this method takes too much CPU to process, and I took a look at this method and found most code is redundant.
 
 Unit Testing:
 * 3 test cases for ConvertToInt(), cases including parameters as zero, positive number, negative number.
